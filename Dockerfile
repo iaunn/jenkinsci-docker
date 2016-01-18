@@ -1,7 +1,7 @@
 FROM java:8-jdk
 
 RUN apt-get update && apt-get install -y wget git curl zip fabric python build-essential 
-RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
+RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN apt-install -y nodejs && npm install -g npm && && rm -rf /var/lib/apt/lists/*
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
